@@ -1,4 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-<h1>Bonjour</h1>
+    <head>
+        <div class="parole">
+            <h1>Bonjour</h1>
+        </div>
+    </head>
 </html>
