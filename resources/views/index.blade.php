@@ -25,7 +25,12 @@
         <td>{{$cat -> price}}</td>
         <td>{{$cat -> description}}</td>
         <td>{{$cat -> birth_date}}</td>
-        <td><a href="/cats/{{$cat->id}}">Voir</a></td>
+            <td><a href="/cats/{{$cat->id}}">Voir</a></td>
+            <td><form action="/cats/{{ $cat->id }}" method="post">
+                @csrf
+                @method('delete')
+        <button type="submit" class="btn btn-primary">Delete ce chat</button>
+        </form></td>
     </tr>
     @endforeach
 </table>

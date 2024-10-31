@@ -19,17 +19,17 @@
 
 <form action="/cats" method="post">
     @csrf
-<label for="name" class="form-label">Name</label><br>
-<input type="text" name="name" id="name" class="form-control">
+    <label for="name" class="form-label">Name</label><br>
+    <input type="text" name="name" id="name" class="form-control">
     @error('name')
     {{@$message}} @enderror<br>
     <label for="price" class="form-label">Price</label><br>
-<input value="{{ old('price') }}" type="number" name="price" id="price" class="form-control">
+    <input value="{{ old('price') }}" type="number" name="price" id="price" class="form-control">
     @error('price')
     {{@$message}} @enderror
     <br>
-<label for="description" class="form-label" >Description</label><br>
-<input type="text" name="description" id="description" class="form-control">
+    <label for="description" class="form-label" >Description</label><br>
+    <input type="text" name="description" id="description" class="form-control">
     @error('description')
     {{@$message}} @enderror
     <br>
