@@ -45,6 +45,6 @@
     {{@$message}} @enderror
     <br><br>
     <button type="submit" class="btn btn-primary">Save</button>
-    <button type="submit" class="btn btn-primary" formaction="/cats" formmethod="get" >Return</button>
+    <button type="button" class="btn btn-primary">Return</button>
 </form>
 </body>

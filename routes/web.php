@@ -40,11 +40,11 @@ Route::get('/cats/{cat}',[CatController::class,'show'] );
 //store
 Route::post('/cats',[CatController::class,'store']);
 //edit
-Route::get('/cats/{id}/edit',[CatController::class,'edit']);
+Route::get('/cats/{cat}/edit',[CatController::class,'edit']);
 //update
-Route::patch('/cats/{id}',[CatController::class,'update']);
+Route::patch('/cats/{cat}',[CatController::class,'update']);
 //destroy
-Route::delete('/cats/{id}',[CatController::class,'delete']);
+Route::delete('/cats/{cat}',[CatController::class,'delete']);
 
 
 

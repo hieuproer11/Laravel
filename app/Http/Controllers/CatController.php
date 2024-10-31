@@ -57,8 +57,8 @@ class CatController extends Controller
         return redirect('/cats/' . $cat->id);
     }
 
-    public function delete($id){
-        $cat = cat::find($id);
+    public function delete(cat $cat){
+
         $cat->delete();
         return redirect('/cats');
     }
