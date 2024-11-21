@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 class CatController extends Controller
 {
     public function index(){
-        $cats = cat::all();
+        $cats = Cat::all();
         return view('index', compact('cats'));
     }
 
-    public function show(cat $cat){
+    public function show(Cat $cat){
         return view('show', compact('cat'));
     }
     public function create(){
@@ -27,7 +27,7 @@ class CatController extends Controller
             'birth_date' => 'required'
         ]);
         //dd($validated['name']);
-        $c = new cat;
+        $c = new Cat;
         $c -> name = request('name');
         $c -> price = request('price');
         $c -> description = request('description');
@@ -37,10 +37,10 @@ class CatController extends Controller
         return redirect('/cats/'.$c->id);
     }
 
-    public function edit(cat $cat){
+    public function edit(Cat $cat){
         return view('edit',compact('cat'));
     }
-    public function update(cat $cat){
+    public function update(Cat $cat){
         $validated = request()->validate([
             'name' => 'required',
             'price' => 'integer',
@@ -57,7 +57,7 @@ class CatController extends Controller
         return redirect('/cats/' . $cat->id);
     }
 
-    public function delete(cat $cat){
+    public function delete(Cat $cat){
 
         $cat->delete();
         return redirect('/cats');

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\cat;
+use App\Models\Cat;
+use App\Models\User;
 use App\Http\Controllers\CatController;
 Route::get('/', function () {
     return view('welcome');
@@ -45,6 +46,12 @@ Route::get('/cats/{cat}/edit',[CatController::class,'edit']);
 Route::patch('/cats/{cat}',[CatController::class,'update']);
 //destroy
 Route::delete('/cats/{cat}',[CatController::class,'delete']);
+//test
+Route::get('/test',function(){
+   $user =  User::find(1);
+   dd($user->owner);
+});
+
 
 
 
